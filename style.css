@@ -21,15 +21,17 @@ html {
 }
 
 :root:has(#t-white:checked) {
-  --bg: #e9e9ee;
-  --surface: #e9e9ee;
-  --border: #4c4a4a;
-  --text: #18181b;
-  --text-muted: #52525b;
-  --accent: #18181b;
-  --accent-hover: #3f3f46;
-  --accent-text: #e9e9ee;
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --border: #d0d7de;
+  --text: #1f2328;
+  --text-muted: #656d76;
+  --accent: #1f2328;
+  --accent-hover: #32383f;
+  --accent-text: #ffffff;
 }
+
+
 
 
 body {
