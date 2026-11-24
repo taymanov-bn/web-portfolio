@@ -1,103 +1,247 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Тайманов Балкан - Личный сайт</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <nav class="navbar navbar-expand-lg fixed-top app-navbar">
+    <div class="container-xl">
+      <a href="#top" class="navbar-brand brand">Тайманов Балкан</a>
 
-  <header class="header">
-    <div class="container header-inner">
-      <a href="#" class="logo">Тайманов Балкан</a>
-      <nav class="nav">
-        <a href="#about">О себе</a>
-        <a href="#projects">Проекты</a>
-        <a href="#notes">В разработке</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-      <div class="themes">
-        <label class="theme-btn">
-          <input type="radio" name="theme" id="t-dark" checked>
-          <span>Черная</span>
-        </label>
-        <label class="theme-btn">
-          <input type="radio" name="theme" id="t-white">
-          <span>Светлая</span>
-        </label>
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
+          <i class="bi bi-moon-stars-fill" data-theme-icon="dark"></i>
+          <i class="bi bi-sun-fill d-none" data-theme-icon="light"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+        <ul class="navbar-nav mx-lg-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#about">О себе</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Проекты</a></li>
+          <li class="nav-item"><a class="nav-link" href="#notes">В разработке</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+        </ul>
       </div>
     </div>
-  </header>
-  <main class="container">
-    <section id="about" class="section intro">
-      <img src="photo.jpg" class="avatar">
-      <div class="intro-text">
-        <h1>Тайманов Балкан</h1>
-        <ul class="info-list">
-          <li><strong>Учёба:</strong> СПбГУ, факультет Математики и Механики, Программная инженерия</li>
-          <li><strong>Интересы:</strong> Системное программирование, машинное обучение, матанчик.</li>
-        </ul>
-        <div class="intro-links">
-          <a href="https://github.com/taymanov-bn" target="_blank" rel="noopener noreferrer" class="btn">Мой GitHub</a>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container-xl">
+        <div class="row align-items-center g-4 g-lg-5">
+
+          <div class="col-lg-7">
+            <p class="meta">СПбГУ · Программная инженерия</p>
+            <h1 class="hero-title">Тайманов <span class="accent-text">Балкан</span></h1>
+            <p class="hero-lead">
+              Студент факультета математики и механики. Интересуюсь системным
+              программированием, машинным обучением и математическим анализом.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#projects" class="btn-primary-custom">Смотреть проекты</a>
+              <a href="https://github.com/taymanov-bn" target="_blank" rel="noopener noreferrer" class="btn-outline-custom">
+                <i class="bi bi-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <img src="photo.jpg" alt="Фото Тайманова Балкана" class="avatar">
+          </div>
+
         </div>
       </div>
     </section>
+
+    <section id="about" class="section">
+      <div class="container-xl">
+        <div class="row g-4">
+
+          <div class="col-lg-7">
+            <h2 class="section-title">О себе</h2>
+            <p class="muted">
+              Больше всего люблю задачи, где нужно разобраться, как всё устроено
+              под капотом - от работы с памятью до архитектуры небольших систем.
+            </p>
+            <p class="muted">
+              Увлёкся программированием в 13 лет. Начинал с Python - сначала писал простые
+              алгоритмы, потом узнал о вёрстке, научился делать сайты и подключил к ним Django.
+              Позже попробовал низкоуровневое программирование и машинное обучение - и понял,
+              что мне это интереснее.
+            </p>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="card-soft h-100">
+              <p class="card-label">Часто использую</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="chip">C</span>
+                <span class="chip">C++</span>
+                <span class="chip">Python</span>
+                <span class="chip">Linux</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <section id="projects" class="section">
-      <h2>Проекты на Github</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="card-head">
-            <h3>Архиватор по алгоритму Хаффмана</h3>
-            <span class="tag">C</span>
+      <div class="container-xl">
+        <h2 class="section-title">Проекты на GitHub</h2>
+        <p class="muted section-desc">То, что уже можно посмотреть в репозиториях.</p>
+
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <article class="project-card h-100">
+              <div class="card-head">
+                <h3>Архиватор по алгоритму Хаффмана</h3>
+                <span class="tag">C</span>
+              </div>
+              <p class="muted">Консольная программа для сжатия файлов без потери данных.</p>
+              <a href="https://github.com/taymanov-bn/Huffman-archiver" target="_blank" rel="noopener noreferrer" class="project-link">
+                Открыть репозиторий <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </article>
           </div>
-          <p>Консольная программа для сжатия файлов без потери данных.</p>
-          <a href="https://github.com/taymanov-bn/Huffman-archiver" target="_blank" rel="noopener noreferrer" class="card-link">Открыть репозиторий →</a>
-        </article>
-        <article class="card">
-          <div class="card-head">
-            <h3>Множество Мандельброта</h3>
-            <span class="tag">C++</span>
+
+          <div class="col-md-6">
+            <article class="project-card h-100">
+              <div class="card-head">
+                <h3>Множество Мандельброта</h3>
+                <span class="tag">C++</span>
+              </div>
+              <p class="muted">
+                Программа для отрисовки фрактала Мандельброта. Мой первый проект на C++ -
+                хотелось своими глазами увидеть, как математика превращается в картинку да и вообще попробовать что то сделать с использованием Raylib.
+              </p>
+              <a href="https://github.com/taymanov-bn/MandelbrotFractal" target="_blank" rel="noopener noreferrer" class="project-link">
+                Открыть репозиторий <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </article>
           </div>
-          <p>
-            Программа для отрисовки фрактала Мандельброта. Сделал как первый проект на С++, ну и было интересно попробовать и увидеть своими глазами такое.
-          </p>
-          <a href="https://github.com/taymanov-bn/MandelbrotFractal" target="_blank" rel="noopener noreferrer" class="card-link">Открыть репозиторий →</a>
-        </article>
+
+        </div>
       </div>
     </section>
+
     <section id="notes" class="section">
-      <h2>Чем ещё занимаюсь</h2>
-      <p class="section-desc">Проекты и задачи в процессе разработки, которые пока что в приватном репо:</p>
-      <div class="notes-box">
-        <div class="note-item">
-          <h3>numC (в разработке)</h3>
-          <p>Пишу на языке C свою библиотеку для работы с матрицами и массивами по аналогии с NumPy. В будущем хочу использовать её как основу для собственного проекта с нейронными сетями.</p>
-        </div>
-        <div class="note-item">
-          <h3>Машинное обучение на Python</h3>
-          <p>Небольшие учебные проекты по обучению простых моделей, ничего более(стартовая точка в машинном обучении).</p>
-        </div>
-        <div class="note-item">
-          <h3>Интерпретатор на C</h3>
-          <p>Пробовал написать свой небольшой язык программирования: написал лексер и парсер, осталось немного, забросил проект на некоторое время.</p>
-        </div>
-        <div class="note-item">
-          <h3>Мини ядро операционной системы</h3>
-          <p>Учебный эксперимент по созданию своего ядра ОС. Мне очень нравятся такие вещи, но забросил проект ибо не справился уже с более сложными концепциями, но в планах вернуться в будущем.</p>
+      <div class="container-xl">
+        <h2 class="section-title">Чем ещё занимаюсь</h2>
+        <p class="muted section-desc">Проекты и задачи в процессе разработки, пока что в приватных репозиториях.</p>
+
+        <div class="notes-list">
+          <div class="note-item">
+            <h3>numC <span class="note-status">в разработке</span></h3>
+            <p class="muted">
+              Пишу на языке C свою библиотеку для работы с матрицами и массивами по
+              аналогии с NumPy. В будущем хочу использовать её как основу для проекта
+              с нейронными сетями.
+            </p>
+          </div>
+          <div class="note-item">
+            <h3>Текстовый редактор на C <span class="note-status">в разработке</span></h3>
+            <p class="muted">
+              Пишу свой текстовый редактор на языке C - интересно разобраться с обработкой
+              ввода, буфером текста и отрисовкой в терминале.
+            </p>
+          </div>
+          <div class="note-item">
+            <h3>Машинное обучение на Python <span class="note-status">учебное</span></h3>
+            <p class="muted">
+              Небольшие учебные проекты по обучению простых моделей - стартовая точка
+              в машинном обучении.
+            </p>
+          </div>
+          <div class="note-item">
+            <h3>Интерпретатор на C <span class="note-status">на паузе</span></h3>
+            <p class="muted">
+              Пробовал написать свой небольшой язык программирования: готовы лексер и
+              парсер, осталось немного. Проект на время отложен.
+            </p>
+          </div>
+          <div class="note-item">
+            <h3>Мини ядро операционной системы <span class="note-status">вернусь позже</span></h3>
+            <p class="muted">
+              Учебный эксперимент по созданию своего ядра ОС. Очень нравятся такие вещи,
+              но проект пришлось отложить - в планах вернуться к более сложным концепциям.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
     <section id="contacts" class="section">
-      <h2>Контакты</h2>
-      <p class="section-desc">Связаться со мной:</p>
-      <div class="contact-links">
-        <a href="https://github.com/taymanov-bn" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
-        <a href="https://t.me/texzonN" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Telegram</a>
-        <a href="mailto:btaymanov07@gmail.com" class="btn btn-secondary">Написать на почту</a>
+      <div class="container-xl">
+        <h2 class="section-title">Контакты</h2>
+        <p class="muted section-desc">Открыт к общению по проектам и интересным задачам.</p>
+
+        <div class="d-flex flex-wrap gap-2">
+          <a href="https://github.com/taymanov-bn" target="_blank" rel="noopener noreferrer" class="btn-outline-custom">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a href="https://t.me/texzonN" target="_blank" rel="noopener noreferrer" class="btn-outline-custom">
+            <i class="bi bi-telegram"></i> Telegram
+          </a>
+          <a href="mailto:btaymanov07@gmail.com" class="btn-outline-custom">
+            <i class="bi bi-envelope"></i> Почта
+          </a>
+        </div>
       </div>
     </section>
+
   </main>
+
+  <footer class="app-footer">
+    <div class="container-xl d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <span>© <span id="year"></span> Тайманов Балкан</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const icons = {
+        dark: toggle.querySelector('[data-theme-icon="dark"]'),
+        light: toggle.querySelector('[data-theme-icon="light"]')
+      };
+      const stored = localStorage.getItem('theme');
+      const initial = stored || 'dark';
+
+      function apply(theme) {
+        root.setAttribute('data-bs-theme', theme);
+        icons.dark.classList.toggle('d-none', theme !== 'dark');
+        icons.light.classList.toggle('d-none', theme !== 'light');
+        localStorage.setItem('theme', theme);
+      }
+
+      apply(initial);
+      toggle.addEventListener('click', function () {
+        apply(root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
